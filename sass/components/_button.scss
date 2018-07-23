@@ -1,0 +1,22 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        padding: .8rem 4rem;
+        display: inline-block;
+        border-radius: 3px;
+        border: none;
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        cursor: pointer;
+    }
+}
+
+.btn--yellow {
+    background-color: $color-yellow-mediumdark;
+}

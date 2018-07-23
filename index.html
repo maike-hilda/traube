@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font for section welcome -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link href="img/favicon.ico" rel="shortcut icon"> -->
+    <title>Hotel zur Traube Waldau Titisee Schwarzwald Gasthof</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar__content">
+            <div class="contact-info">
+                <a href="tel:+4976692290" class="contact-info__link">+49 7669 229-0</a>
+                <a href="mailto:info@traube-waldau.de" class="contact-info__link">info@traube-waldau.de</a>
+            </div>
+            <div class="language-select">
+                <a href="#" title="German" class="language-select--german"><img class="flag-icon" src="img/flag-german.png" alt="German"></a>
+                <a href="#" title="English" class="language-select--english"><img class="flag-icon" src="img/flag-english--us.png" alt="English"></a>
+                <a href="#" title="French" class="language-select--french"><img class="flag-icon" src="img/flag-french.png" alt="French"></a>
+                <a href="#" title="Italian" class="language-select--italian"><img class="flag-icon" src="img/flag-italian.png" alt="Italian"></a>
+                <a href="#" title="Dutch" class="language-select--dutch"><img class="flag-icon" src="img/flag-dutch.png" alt="Dutch"></a>
+                <a href="#" title="Spanish" class="language-select--spanish"><img class="flag-icon" src="img/flag-spanish.png" alt="Spanish"></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top__logo">
+                <img class="header-top__logo--img" src="../img/traube-logo.svg" alt="logo">
+                <div class="header-top__logo--text">"Zur Traube"</div>  
+            </div>
+        </div>
+        
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Hotel</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Angebote</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Restaurant</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Tagen &amp; Feiern</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Freizeit</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Anreise</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Kontakt</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Sonstiges</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-welcome">
+            <div class="section-welcome__text">
+                Herzlich Willkommen bei Uns in der Traube in Waldau 
+            </div>
+        </section>
+
+        <section class="section-slider">
+            <div class="slider">
+                <a href="#">
+                    <div class="slider__container">
+                        <figure class="slider__figure">
+                            <img src="img/traube1.jpg" alt="traube" class="slider__img">
+                            <img src="img/traube2.jpg" alt="traube" class="slider__img">
+                            <img src="img/traube1.jpg" alt="traube" class="slider__img">
+                            <img src="img/traube2.jpg" alt="traube" class="slider__img">
+                            <img src="img/traube1.jpg" alt="traube" class="slider__img">
+                        </figure>
+                    </div>
+                </a>                
+            </div>
+            
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <img src="../img/traube-logo.svg" class="footer__logo-img" alt="logo">
+        </div>
+
+        <div class="footer__contact">
+            <ul>
+                <li class="footer__item">Eugen Winterhalder</li>
+                <li class="footer__item">Hotel Schwarzwald Gasthof "Zur Traube" im Bergdorf Waldau bei Freiburg</li>
+            </ul>
+        </div>
+        <div class="footer__contact">
+            <ul>
+                <li class="footer__item">Sommerbergweg 1</li>
+                <li class="footer__item">Bergdorf Waldau</li>
+                <li class="footer__item">79822 Titisee-Neustadt im Hochschwarzwald</li>
+            </ul>
+        </div>
+        <div class="footer__contact">
+            <ul>
+                <li class="footer__item">Tel.: <a href="tel:+4976692290" class="footer__link">+49 (0) 7669 / 229-0</a></li>
+                <li class="footer__item">Fax.: +49 (0) 7669 / 229-29</li>
+                <li class="footer__item">Mobil: +49 (0) 170 / 6329244</li>
+                <li class="footer__item">E-Mail: <a href="mailto:info@traube-waldau.de" class="footer__link">info@traube-waldau.de</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="booking">
+        <div class="booking__form">
+            <form action="#" class="form">
+                <div class="form__group">
+                    <legend>Online Buchen</legend>
+                </div>
+                <div class="form__group">
+                    <label for="arrival-date" class="form__label">Anreise</label>
+                    <input type="date" class="form__input" id="arrival-date" min="2018-01-01" required>
+                </div>
+                <div class="form__group">
+                    <label for="departure-date" class="form__label">Abreise</label>
+                    <input type="date" class="form__input" id="departure-date" min="2018-01-01" required>
+                </div>
+                <div class="form__group">
+                    <label for="adults" class="form__label">Adults</label>
+                    <select name="adults" class="form__input" id="adults">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="children" class="form__label">Children</label>
+                    <select name="children" class="form__input" id="children">
+                        <option value="0" selected>-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <button class="btn btn--yellow">Next step</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

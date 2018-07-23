@@ -1,0 +1,23 @@
+.section-welcome {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-yellow-light, 0.8),
+        rgba($color-yellow-medium, 0.8)
+        ), url(../img/traube1.jpg); 
+    background-size: 100%; //cover;
+    background-position: center center;
+    min-height: 50rem;
+    
+    &__text {
+        font-size: 5rem;
+        font-weight: 700;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        padding: 15rem 0;
+    }
+
+    
+    
+}

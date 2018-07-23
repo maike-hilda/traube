@@ -1,0 +1,29 @@
+.slider {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10rem 0;
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__figure {
+        position: relative;
+        width: 500%; // since 5 images
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 20s slider;
+
+        
+    }
+
+    &__img {
+        width: 20%;
+        float: left;
+
+        border-radius: 3px;
+        box-shadow: 0 1rem 2rem rgba($color-black, .4);
+    }
+}

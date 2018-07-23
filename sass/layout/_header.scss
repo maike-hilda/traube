@@ -1,0 +1,72 @@
+.header {
+    margin-top: $padding-header-footer-main;
+    background-color: $color-yellow-medium;    
+}
+
+.header-top {
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        transparent 80%,
+        $color-yellow-medium 100%),
+        url(../img/traube-waldau-banner.png);
+    padding: -2rem -$padding-header-footer-main;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 20rem;
+    
+    &__logo {
+        width: 25%;
+        float: left;
+        padding: 0 $padding-header-footer-main;
+
+        &--img {
+            width: 100%;
+        }
+
+        &--text {
+            font-family: FetteFraktur, serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 100%;
+        }
+    }
+}
+
+// navbar
+.nav {
+    background: linear-gradient(
+        to bottom, 
+        $color-yellow-mediumdark, 
+        $color-yellow-medium, 
+        $color-yellow-mediumdark);
+    
+
+    padding: 3rem $padding-header-footer-main 2rem;
+    position: relative;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-black;
+            text-decoration: none;
+        }
+    }
+}
+

@@ -1,0 +1,336 @@
+/* 
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800px] is where our normal styles apply
+1800px + :      Big desktop
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: base + tyography > general layout + grid > pay layout > components
+
+1em = 16px
+*/
+@keyframes slider {
+  0% {
+    left: 0; }
+  20% {
+    left: 0; }
+  25% {
+    left: -100%; }
+  45% {
+    left: -100%; }
+  50% {
+    left: -200%; }
+  70% {
+    left: -200%; }
+  75% {
+    left: -300%; }
+  95% {
+    left: -300%; }
+  100% {
+    left: -400%; } }
+
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* border-box -> default is content box */ }
+
+/* set root font size */
+html {
+  font-size: 62.6%;
+  /* with 16px default 10px i.e. 1rem = 10px */
+  /* better to use % in case user needs bigger font */
+  /* if directive */
+  /* ems and rems in media queries are not affected by anything but base font in the browser */
+  /* ems work best in media querires, 1em = 16px */
+  /* if directive */
+  /* ems and rems in media queries are not affected by anything but base font in the browser */
+  /* ems work best in media querires, 1em = 16px */
+  /* if directive */
+  /* ems and rems in media queries are not affected by anything but base font in the browser */
+  /* ems work best in media querires, 1em = 16px */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  /* not inherited properties */
+  background-color: #FEF2DB;
+  /* if directive */
+  /* ems and rems in media queries are not affected by anything but base font in the browser */
+  /* ems work best in media querires, 1em = 16px */ }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+.main {
+  padding: 3rem; }
+
+@font-face {
+  font-family: FetteFraktur;
+  src: url(/fonts/FetteClassicUNZFraktur.ttf) format("truetype"); }
+
+body {
+  /* inherited properties */
+  font-family: Verdana, Arial, sans-serif;
+  /* this font is included in google fonts in html link */
+  font-weight: 400;
+  /* font-size: 16px; */
+  font-size: 1.6rem;
+  line-height: 1.7;
+  /* 1.7 times bigger than predefined */
+  color: #251000; }
+
+.booking {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(251, 220, 166, 0.8);
+  opacity: 0.9;
+  padding: 3rem;
+  min-height: 10rem;
+  z-index: 1000; }
+
+.form {
+  display: flex;
+  justify-content: space-between; }
+  .form__label {
+    margin-right: 1rem; }
+  .form__group {
+    display: inline-block; }
+  .form__input {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: inherit;
+    padding: .3rem 0;
+    border-radius: 2px;
+    background-color: rgba(254, 242, 219, 0.8);
+    border: none; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(37, 16, 0, 0.1); }
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  padding: .8rem 4rem;
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(37, 16, 0, 0.2);
+  cursor: pointer; }
+
+.btn--yellow {
+  background-color: #ffca6d; }
+
+.slider {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10rem 0; }
+  .slider__container {
+    overflow: hidden; }
+  .slider__figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slider; }
+  .slider__img {
+    width: 20%;
+    float: left;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(37, 16, 0, 0.4); }
+
+.footer {
+  padding: 2rem 3rem;
+  margin-bottom: 10rem;
+  border-bottom: 2px solid #ffca6d;
+  background-color: #fbdca6;
+  font-size: 1.2rem; }
+  .footer__logo {
+    text-align: center; }
+  .footer__logo-img {
+    width: 15%; }
+  .footer__contact {
+    text-align: center;
+    padding: .6rem 0; }
+  .footer__item {
+    display: inline-block;
+    line-height: 1; }
+    .footer__item:not(:last-child) {
+      border-right: 1px solid #e09f27;
+      padding-right: 2rem; }
+    .footer__item:not(:nth-of-type(1)) {
+      padding-left: 2rem; }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s; }
+  .footer__link:hover {
+    transform: scale(1.2);
+    color: #003c55; }
+
+.header {
+  margin-top: 3rem;
+  background-color: #fbdca6; }
+
+.header-top {
+  background: linear-gradient(to right, transparent 0%, transparent 80%, #fbdca6 100%), url(../img/traube-waldau-banner.png);
+  padding: -5rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 20rem; }
+  .header-top__logo {
+    width: 25%;
+    float: left;
+    padding: 0 3rem; }
+    .header-top__logo--img {
+      width: 100%; }
+    .header-top__logo--text {
+      font-family: FetteFraktur, serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 100%; }
+
+.nav {
+  background: linear-gradient(to bottom, #ffca6d, #fbdca6, #ffca6d);
+  padding: 3rem 3rem 2rem;
+  position: relative; }
+  .nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; }
+  .nav__item {
+    display: inline-block; }
+    .nav__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .nav__link:link, .nav__link:visited {
+    color: #251000;
+    text-decoration: none; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  /* if directive */
+  /* ems and rems in media queries are not affected by anything but base font in the browser */
+  /* ems work best in media querires, 1em = 16px */ }
+  .row:not(:last-child) {
+    margin-bottom: 8rem;
+    /* if directive */
+    /* ems and rems in media queries are not affected by anything but base font in the browser */
+    /* ems work best in media querires, 1em = 16px */ }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left;
+    /* if directive */
+    /* ems and rems in media queries are not affected by anything but base font in the browser */
+    /* ems work best in media querires, 1em = 16px */ }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem;
+      /* if directive */
+      /* ems and rems in media queries are not affected by anything but base font in the browser */
+      /* ems work best in media querires, 1em = 16px */ }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem); }
+
+.topbar {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  background-color: #e9e6e1;
+  z-index: 1000; }
+  .topbar::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .topbar__content {
+    float: right; }
+
+.contact-info {
+  display: inline-block; }
+  .contact-info__link:link, .contact-info__link:visited {
+    color: #0084bb;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-right: 2rem; }
+  .contact-info__link:hover, .contact-info__link:active {
+    color: #003c55; }
+
+.language-select {
+  display: inline-block; }
+  .language-select:last-child {
+    margin-right: 1rem; }
+
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  opacity: .7;
+  margin-right: .2rem;
+  margin-top: .5rem; }
+  .flag-icon:hover {
+    opacity: 1; }
+
+.section-welcome {
+  background-image: linear-gradient(to right bottom, rgba(254, 242, 219, 0.8), rgba(251, 220, 166, 0.8)), url(../img/traube1.jpg);
+  background-size: 100%;
+  background-position: center center;
+  min-height: 50rem; }
+  .section-welcome__text {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15rem 0; }

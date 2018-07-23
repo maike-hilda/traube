@@ -1,0 +1,47 @@
+/* reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /* border-box -> default is content box */
+}
+
+/* set root font size */
+html {
+    font-size: 62.6%; /* with 16px default 10px i.e. 1rem = 10px */
+    /* better to use % in case user needs bigger font */
+
+    @include respond(tab-land) { // width < 1200
+        font-size: 56.25%; // 1rem = 9px = 56.25%
+    }
+
+    @include respond(tab-port) { // width < 900
+        font-size: 50%; // 1rem = 8px = 50%
+    }
+
+    // @include respond(phone) {
+    //     font-size: 50%;
+    // } --> since we want the phone and tab-port to be the same font-size, we don't need this
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px = 75%
+    }
+}
+
+body {
+    box-sizing: border-box;
+    
+    /* not inherited properties */
+    background-color: $color-yellow-light;
+
+    //padding: 3rem;
+
+    @include respond(tab-port) { // width < 900
+        padding: 0;
+    }
+}
+
+.main {
+    padding: $padding-header-footer-main;
+}
